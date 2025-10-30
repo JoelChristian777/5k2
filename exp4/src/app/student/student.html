@@ -1,0 +1,24 @@
+<div style="max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
+  <h2 style="text-align: center;">Student Registration Form</h2>
+
+  <form (ngSubmit)="onSubmit()" #regForm="ngForm">
+    <div style="margin-bottom: 10px;">
+      <label>Name:</label><br>
+      <input type="text" name="name" [(ngModel)]="name" required style="width: 100%; padding: 5px;">
+    </div>
+
+    <div style="margin-bottom: 10px;">
+      <label>Email:</label><br>
+      <input type="email" name="email" [(ngModel)]="email" required style="width: 100%; padding: 5px;">
+    </div>
+
+    <div style="margin-bottom: 10px;">
+      <label>Password:</label><br>
+      <input type="password" name="password" [(ngModel)]="password" required style="width: 100%; padding: 5px;">
+    </div>
+
+    <button type="submit" style="width: 100%; padding: 8px; background-color: #007bff; color: white; border: none;">
+      Register
+    </button>
+  </form>
+</div>

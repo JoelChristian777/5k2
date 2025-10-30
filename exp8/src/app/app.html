@@ -1,0 +1,23 @@
+<h1>Getting data from servers</h1>
+<br />
+<hr />
+<p *ngIf="isLoading">page Loading</p>
+<p *ngIf="errorMessage">Error occured</p>
+<table *ngIf="!isLoading && users.length > 0" border="1" cellpadding="8">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>UseName</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.username }}</td>
+      <td>{{ user.email }}</td>
+    </tr>
+  </tbody>
+</table>
